@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SF Half Marathon Training Plan · Frederick Kim</title>
+<style>
+  /* ── Reset & base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:   #1b3a6b;
+    --teal:   #007a87;
+    --teal-light: #e0f4f6;
+    --gold:   #e8a000;
+    --gold-light: #fff8e1;
+    --green:  #2e7d32;
+    --green-light: #e8f5e9;
+    --orange: #e65900;
+    --orange-light: #fff3e0;
+    --red:    #c62828;
+    --red-light: #fdecea;
+    --gray:   #888;
+    --gray-light: #f5f5f5;
+    --bg:     #f4f6f9;
+    --card:   #ffffff;
+    --text:   #1a1a2e;
+    --muted:  #555;
+    --border: #dde3ee;
+    --shadow: 0 2px 12px rgba(27,58,107,.10);
+    --radius: 12px;
+  }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+
+  /* ── Header ── */
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2c5282 100%);
+    color: #fff;
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+  }
+  header h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 700; letter-spacing: -.5px; }
+  header .sub { margin-top: .4rem; font-size: 1rem; opacity: .85; }
+  .goal-pill {
+    display: inline-block; margin-top: .8rem;
+    background: var(--gold); color: #1a1a2e;
+    font-weight: 700; font-size: .95rem; padding: .3rem 1.1rem; border-radius: 99px;
+  }
+
+  /* ── Main layout ── */
+  main { max-width: 900px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+
+  /* ── Section headings ── */
+  h2 { font-size: 1.15rem; color: var(--navy); font-weight: 700; margin: 2rem 0 .75rem; letter-spacing: -.3px; }
+  h2 span { display: inline-block; width: 4px; height: 1em; background: var(--teal); border-radius: 2px; margin-right: .5rem; vertical-align: middle; }
+
+  /* ── Pace zone grid ── */
+  .zone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .75rem; }
+  .zone-card {
+    background: var(--card); border-radius: var(--radius); padding: 1rem;
+    border-left: 4px solid var(--border); box-shadow: var(--shadow);
+  }
+  .zone-card.z1 { border-color: var(--green); }
+  .zone-card.z2 { border-color: var(--teal); }
+  .zone-card.z3 { border-color: var(--orange); }
+  .zone-card.z4 { border-color: var(--red); }
+  .zone-card.z5 { border-color: #880e4f; }
+  .zone-card .zlabel { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .zone-card .ztype  { font-weight: 700; font-size: .92rem; margin: .2rem 0; }
+  .zone-card .zpace  { font-size: .85rem; color: var(--muted); }
+  .zone-card .zfeel  { font-size: .78rem; color: var(--muted); margin-top: .3rem; font-style: italic; }
+
+  /* ── Week blocks ── */
+  .week-block { margin-bottom: 1.25rem; }
+  .week-header {
+    display: flex; align-items: center; gap: .75rem;
+    padding: .65rem 1rem; background: var(--navy); color: #fff;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .week-header .wnum { font-size: .75rem; font-weight: 700; background: rgba(255,255,255,.15); padding: .15rem .5rem; border-radius: 99px; }
+  .week-header .wdates { font-size: .85rem; opacity: .8; }
+  .week-header .wfocus { font-size: .85rem; margin-left: auto; opacity: .75; font-style: italic; }
+  .week-header.race-week { background: linear-gradient(90deg, #7b3f00, var(--gold)); }
+
+  .runs-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  @media (max-width: 600px) { .runs-row { grid-template-columns: 1fr; } }
+
+  /* ── Day card ── */
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+    position: relative;
+  }
+  .day-card:hover { background: #eef2fa; }
+  .day-card:active { transform: scale(.98); }
+  .day-card + .day-card { border-left: none; }
+  .day-card:last-child { border-radius: 0 0 var(--radius) 0; }
+  .day-card:first-child { border-radius: 0 0 0 var(--radius); }
+  @media (max-width: 600px) {
+    .day-card + .day-card { border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+    .day-card:last-child  { border-radius: 0 0 var(--radius) var(--radius); }
+    .day-card:first-child { border-radius: 0; }
+  }
+
+  .day-label  { font-size: .75rem; color: var(--muted); margin-bottom: .3rem; }
+  .type-badge {
+    display: inline-block; font-size: .7rem; font-weight: 700;
+    padding: .15rem .6rem; border-radius: 99px; margin-bottom: .5rem;
+    text-transform: uppercase; letter-spacing: .06em;
+  }
+  .badge-easy  { background: var(--green-light);  color: var(--green); }
+  .badge-long  { background: var(--teal-light);   color: var(--teal); }
+  .badge-tempo { background: var(--orange-light); color: var(--orange); }
+  .badge-speed { background: var(--red-light);    color: var(--red); }
+  .badge-race  { background: var(--gold-light);   color: #7b3f00; }
+  .badge-rest  { background: var(--gray-light);   color: var(--gray); }
+
+  .day-dist  { font-weight: 700; font-size: .95rem; }
+  .day-pace  { font-size: .78rem; color: var(--muted); margin-top: .2rem; line-height: 1.35; }
+  .click-hint { font-size: .7rem; color: var(--teal); margin-top: .5rem; opacity: .7; }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(10,20,50,.55); z-index: 100;
+    align-items: center; justify-content: center; padding: 1rem;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--card); border-radius: var(--radius);
+    max-width: 640px; width: 100%; max-height: 90vh;
+    overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    animation: slideUp .2s ease;
+  }
+  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  .modal-header {
+    background: var(--navy); color: #fff;
+    padding: 1.25rem 1.5rem; border-radius: var(--radius) var(--radius) 0 0;
+    position: sticky; top: 0; z-index: 1;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+  }
+  .modal-header h3 { font-size: 1.1rem; }
+  .modal-header .modal-meta { font-size: .82rem; opacity: .8; margin-top: .2rem; }
+  .modal-close {
+    background: none; border: none; color: #fff; font-size: 1.5rem;
+    cursor: pointer; line-height: 1; padding: 0 .25rem; opacity: .7; flex-shrink: 0;
+  }
+  .modal-close:hover { opacity: 1; }
+
+  .modal-body { padding: 1.5rem; }
+
+  .modal-section { margin-bottom: 1.5rem; }
+  .modal-section:last-child { margin-bottom: 0; }
+
+  .section-title {
+    font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--teal); margin-bottom: .6rem; padding-bottom: .3rem;
+    border-bottom: 2px solid var(--teal-light);
+  }
+
+  /* Run summary card */
+  .run-summary {
+    background: var(--bg); border-radius: 8px; padding: 1rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: .5rem;
+  }
+  .run-summary .rs-item .rs-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .run-summary .rs-item .rs-val   { font-weight: 700; font-size: .95rem; margin-top: .1rem; }
+  .run-notes { font-size: .88rem; color: var(--muted); margin-top: .75rem; line-height: 1.6; }
+
+  /* Step lists */
+  .step-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+  .step-list li {
+    display: flex; gap: .75rem; align-items: flex-start;
+    background: var(--bg); border-radius: 8px; padding: .65rem .85rem;
+    font-size: .86rem;
+  }
+  .step-num {
+    min-width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .7rem; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  .wu-num  { background: var(--green); }
+  .cd-num  { background: var(--teal); }
+  .step-content .step-name   { font-weight: 600; }
+  .step-content .step-detail { color: var(--muted); font-size: .8rem; margin-top: .1rem; }
+
+  /* ── Footer ── */
+  footer { text-align: center; padding: 2rem 1rem; font-size: .8rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>SF Half Marathon Training Plan</h1>
+  <div class="sub">May 13 – July 26, 2026 &nbsp;·&nbsp; Frederick Kim</div>
+  <div class="goal-pill">🎯 Goal: Sub-2:00:00 &nbsp;|&nbsp; 9:09 /mi</div>
+</header>
+
+<main>
+
+  <!-- Pace Zones -->
+  <h2><span></span>Training Pace Zones</h2>
+  <div class="zone-grid" id="zone-grid"></div>
+
+  <!-- Weekly Plan -->
+  <h2><span></span>10-Week Schedule</h2>
+  <p style="font-size:.85rem;color:var(--muted);margin-bottom:1rem;">Click any run day to see the full workout, warm-up routine, and cool-down stretches.</p>
+  <div id="weeks-container"></div>
+
+</main>
+
+<footer>SF Half Marathon · July 26, 2026 · Good luck, Frederick! 🏃</footer>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal" id="modal">
+    <div class="modal-header" id="modal-header">
+      <div>
+        <h3 id="modal-title"></h3>
+        <div class="modal-meta" id="modal-meta"></div>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ── Fetch plan data ────────────────────────────────────────────────────────
+async function loadPlan() {
+  const res = await fetch('training_plan.json');
+  return res.json();
+}
+
+// ── Badge helper ──────────────────────────────────────────────────────────
+function badge(typeTag, type) {
+  const short = { easy:'Easy', long:'Long Run', tempo:'Tempo', speed:'Speed', race:'Race Pace', rest:'Rest' };
+  return `<span class="type-badge badge-${typeTag}">${short[typeTag] || type}</span>`;
+}
+
+// ── Render pace zones ─────────────────────────────────────────────────────
+function renderZones(zones) {
+  const grid = document.getElementById('zone-grid');
+  grid.innerHTML = zones.map((z,i) => `
+    <div class="zone-card z${i+1}">
+      <div class="zlabel">Zone ${z.zone}</div>
+      <div class="ztype">${z.type}</div>
+      <div class="zpace">${z.pace}</div>
+      <div class="zfeel">${z.feel}</div>
+    </div>`).join('');
+}
+
+// ── Render weeks ──────────────────────────────────────────────────────────
+function renderWeeks(weeks) {
+  const container = document.getElementById('weeks-container');
+  container.innerHTML = weeks.map(week => {
+    const isRace = week.week === 11;
+    const headerClass = isRace ? 'week-header race-week' : 'week-header';
+    const weekLabel = isRace ? 'Race Week' : `Week ${week.week}`;
+    const runs = week.runs.map((run, ri) => `
+      <div class="day-card" data-week="${week.week}" data-run="${ri}" tabindex="0" role="button" aria-label="View ${run.dayLabel}">
+        <div class="day-label">${run.dayLabel}</div>
+        ${badge(run.typeTag, run.type)}
+        <div class="day-dist">${run.distance}</div>
+        <div class="day-pace">${run.pace}</div>
+        <div class="click-hint">Tap for full details →</div>
+      </div>`).join('');
+    return `
+      <div class="week-block">
+        <div class="${headerClass}">
+          <span class="wnum">${weekLabel}</span>
+          <span class="wdates">${week.dates}</span>
+          <span class="wfocus">${week.focus}</span>
+        </div>
+        <div class="runs-row">${runs}</div>
+      </div>`;
+  }).join('');
+}
+
+// ── Render step list ──────────────────────────────────────────────────────
+function renderSteps(steps, type) {
+  const numClass = type === 'wu' ? 'wu-num' : 'cd-num';
+  return `<ul class="step-list">${steps.map(s => `
+    <li>
+      <div class="step-num ${numClass}">${s.step}</div>
+      <div class="step-content">
+        <div class="step-name">${s.name}</div>
+        <div class="step-detail">${type === 'wu' ? s.detail + ' — ' + s.purpose : s.hold + ' — ' + s.target}</div>
+      </div>
+    </li>`).join('')}</ul>`;
+}
+
+// ── Open modal ────────────────────────────────────────────────────────────
+let planData = null;
+
+function openModal(weekIdx, runIdx) {
+  const week = planData.weeks[weekIdx];
+  const run  = week.runs[runIdx];
+
+  const headerEl = document.getElementById('modal-header');
+  headerEl.style.background = run.typeTag === 'rest' ? '#555' :
+    run.typeTag === 'race' ? 'linear-gradient(90deg,#7b3f00,#e8a000)' :
+    run.typeTag === 'long' ? 'var(--teal)' :
+    run.typeTag === 'tempo' ? 'var(--orange)' :
+    run.typeTag === 'speed' ? 'var(--red)' : 'var(--navy)';
+
+  document.getElementById('modal-title').textContent = run.dayLabel;
+  document.getElementById('modal-meta').innerHTML =
+    `Week ${week.week} &nbsp;·&nbsp; ${week.focus}`;
+
+  // Filter warm-up steps: skip A-skips for easy/rest runs
+  const isIntense = ['tempo','speed','race'].includes(run.typeTag);
+  const wuSteps = isIntense
+    ? planData.warmup
+    : planData.warmup.filter(s => s.step !== 9);
+
+  document.getElementById('modal-body').innerHTML = `
+    <!-- Run -->
+    <div class="modal-section">
+      <div class="section-title">🏃 The Run</div>
+      <div class="run-summary">
+        <div class="rs-item"><div class="rs-label">Type</div><div class="rs-val">${run.type}</div></div>
+        <div class="rs-item"><div class="rs-label">Distance</div><div class="rs-val">${run.distance}</div></div>
+        <div class="rs-item" style="grid-column:1/-1"><div class="rs-label">Pace</div><div class="rs-val" style="font-size:.85rem;font-weight:600">${run.pace}</div></div>
+      </div>
+      <div class="run-notes">${run.notes}</div>
+      ${run.warmupNote ? `<div class="run-notes" style="margin-top:.5rem;padding:.6rem .85rem;background:var(--green-light);border-radius:6px;border-left:3px solid var(--green)"><strong>Coach's note:</strong> ${run.warmupNote}</div>` : ''}
+    </div>
+
+    <!-- Warm-up -->
+    <div class="modal-section">
+      <div class="section-title">🔥 Warm-Up (10–12 min)</div>
+      ${renderSteps(wuSteps, 'wu')}
+    </div>
+
+    <!-- Cool-down -->
+    <div class="modal-section">
+      <div class="section-title">🧊 Cool-Down & Stretches (12–15 min)</div>
+      ${run.cooldownNote ? `<div class="run-notes" style="margin-bottom:.75rem;padding:.6rem .85rem;background:var(--teal-light);border-radius:6px;border-left:3px solid var(--teal)"><strong>Today's focus:</strong> ${run.cooldownNote}</div>` : ''}
+      ${renderSteps(planData.cooldown, 'cd')}
+    </div>
+  `;
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── Wire up events ────────────────────────────────────────────────────────
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+document.getElementById('weeks-container').addEventListener('click', e => {
+  const card = e.target.closest('.day-card');
+  if (!card) return;
+  const weekNum = parseInt(card.dataset.week);
+  const runIdx  = parseInt(card.dataset.run);
+  const weekIdx = planData.weeks.findIndex(w => w.week === weekNum);
+  if (weekIdx !== -1) openModal(weekIdx, runIdx);
+});
+document.getElementById('weeks-container').addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    const card = e.target.closest('.day-card');
+    if (card) {
+      e.preventDefault();
+      card.click();
+    }
+  }
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────
+loadPlan().then(plan => {
+  planData = plan;
+  renderZones(plan.paceZones);
+  renderWeeks(plan.weeks);
+}).catch(() => {
+  document.getElementById('weeks-container').innerHTML =
+    '<p style="color:red;padding:1rem">Could not load training_plan.json — make sure both files are served together.</p>';
+});
+</script>
+</body>
+</html>

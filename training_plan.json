@@ -1,0 +1,485 @@
+{
+  "meta": {
+    "athlete": "Frederick Kim",
+    "race": "SF Half Marathon",
+    "raceDate": "2026-07-26",
+    "goal": "Sub 2:00:00",
+    "targetPace": "9:09/mi",
+    "planStart": "2026-05-13",
+    "planEnd": "2026-07-26"
+  },
+  "paceZones": [
+    { "zone": 1, "type": "Easy / Recovery",   "pace": "11:00–11:30 /mi", "feel": "Can sing, fully conversational" },
+    { "zone": 2, "type": "Long Run",           "pace": "10:15–11:00 /mi", "feel": "Comfortable, full sentences" },
+    { "zone": 3, "type": "Tempo",              "pace": "9:15–9:45 /mi",  "feel": "Comfortably hard, a few words" },
+    { "zone": 4, "type": "Race Pace",          "pace": "9:00–9:09 /mi",  "feel": "Hard but controlled, 1–2 words" },
+    { "zone": 5, "type": "Speed / Intervals",  "pace": "8:00–8:45 /mi",  "feel": "Very hard, 5K effort, no talking" }
+  ],
+  "warmup": [
+    { "step": 1,  "name": "Brisk walk",                          "detail": "3 minutes",                "purpose": "Gradually raise heart rate, loosen ankles and calves" },
+    { "step": 2,  "name": "Leg swings — front to back",          "detail": "12 each leg",              "purpose": "Open hip flexors and hamstrings dynamically" },
+    { "step": 3,  "name": "Leg swings — side to side",           "detail": "12 each leg",              "purpose": "Activate hip abductors and IT band" },
+    { "step": 4,  "name": "Hip circles",                         "detail": "10 each direction",        "purpose": "Lubricate hip joints before loading" },
+    { "step": 5,  "name": "High knees (slow & controlled)",      "detail": "20 reps",                  "purpose": "Activate glutes and core, warm up hip flexors" },
+    { "step": 6,  "name": "Butt kicks",                          "detail": "20 reps",                  "purpose": "Activate hamstrings, increase range of motion" },
+    { "step": 7,  "name": "Dynamic lateral lunge with twist",    "detail": "8 each side",              "purpose": "Warm up inner thighs and thoracic spine" },
+    { "step": 8,  "name": "Ankle circles + calf raises",         "detail": "10 circles + 15 raises",   "purpose": "Prep ankles for SF's uneven pavement" },
+    { "step": 9,  "name": "A-skips (tempo & speed days only)",   "detail": "2 × 10 meters",            "purpose": "Reinforce running form, increase cadence" },
+    { "step": 10, "name": "Easy jog ramp-up",                    "detail": "2–3 minutes",              "purpose": "Transition to run pace; ease into workout effort" }
+  ],
+  "cooldown": [
+    { "step": 1,  "name": "Walk to cool down",                        "hold": "3–5 minutes",     "target": "Full body — bring heart rate below 100 BPM before stretching" },
+    { "step": 2,  "name": "Standing quad stretch",                    "hold": "45 sec each leg", "target": "Quadriceps — critical for downhill running in SF" },
+    { "step": 3,  "name": "Standing calf stretch (straight leg)",     "hold": "45 sec each leg", "target": "Gastrocnemius — protects Achilles on hills" },
+    { "step": 4,  "name": "Standing calf stretch (bent knee)",        "hold": "30 sec each leg", "target": "Soleus — deeper calf muscle, often neglected" },
+    { "step": 5,  "name": "Hip flexor kneeling lunge",                "hold": "60 sec each side","target": "Hip flexors & psoas — tighten from sitting at a desk" },
+    { "step": 6,  "name": "Seated hamstring stretch",                 "hold": "45 sec each leg", "target": "Hamstrings — prevents lower back tightness" },
+    { "step": 7,  "name": "Supine figure-four (glute/piriformis)",    "hold": "60 sec each side","target": "Glutes & piriformis — prevents IT band issues on long runs" },
+    { "step": 8,  "name": "Pigeon pose (or seated variation)",        "hold": "60 sec each side","target": "Deep hip rotators — key for SF's uneven surfaces" },
+    { "step": 9,  "name": "IT band cross-body stretch (standing)",    "hold": "30 sec each side","target": "IT band — common runner's injury site" },
+    { "step": 10, "name": "Supine spinal twist",                      "hold": "30 sec each side","target": "Thoracic spine & lower back — releases compression from running" },
+    { "step": 11, "name": "Child's pose",                             "hold": "60 seconds",      "target": "Full back decompression — do this last, every time" }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "dates": "May 13–17",
+      "focus": "Base Aerobic Foundation",
+      "runs": [
+        {
+          "date": "2026-05-13",
+          "dayLabel": "Wed May 13",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "4 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "First run of the plan. Keep it easy and conversational the whole way. Focus on form — short quick strides, relaxed shoulders.",
+          "warmupNote": "Standard full warm-up. This sets the tone for the next 10 weeks.",
+          "cooldownNote": "Standard full cool-down. Take your time — no rush after an easy run."
+        },
+        {
+          "date": "2026-05-16",
+          "dayLabel": "Sat May 16",
+          "type": "Easy + Strides",
+          "typeTag": "easy",
+          "distance": "4 mi",
+          "pace": "11:00 /mi + 4 × 20-sec surges at 8:30 /mi",
+          "notes": "Run 3.5 miles easy, then do 4 strides of 20 seconds at near-sprint effort with 60-sec walk recovery between each. Strides wake up fast-twitch fibres without fatiguing you.",
+          "warmupNote": "Standard warm-up. Add A-skips (step 9) today since you're doing strides.",
+          "cooldownNote": "Standard cool-down. Pay extra attention to the quad stretch after the strides."
+        },
+        {
+          "date": "2026-05-17",
+          "dayLabel": "Sun May 17",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "5 mi",
+          "pace": "10:30–11:00 /mi",
+          "notes": "First long run. Run by effort not pace — if a hill slows you to 11:30, that's fine. Practice your race-day nutrition routine: water every 20 min.",
+          "warmupNote": "Full warm-up. Spend extra time on hip circles and leg swings before a long run.",
+          "cooldownNote": "Full cool-down with extra time on pigeon pose (90 sec each side) and hamstring stretch after the longer distance."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "dates": "May 20–24",
+      "focus": "Introduce Tempo Work",
+      "runs": [
+        {
+          "date": "2026-05-20",
+          "dayLabel": "Wed May 20",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "4 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "True recovery run. If you're sore from last week, keep this very easy at 11:30+ /mi.",
+          "warmupNote": "Light warm-up. If legs are sore, extend the brisk walk to 5 minutes before jogging.",
+          "cooldownNote": "Standard cool-down. Focus on the hip flexor lunge if you're feeling tightness from the weekend."
+        },
+        {
+          "date": "2026-05-23",
+          "dayLabel": "Sat May 23",
+          "type": "Tempo Intervals",
+          "typeTag": "tempo",
+          "distance": "5 mi total",
+          "pace": "Warm-up 1 mi easy | 2 × 1.5 mi at 9:30–9:45 /mi | Cool-down 1 mi",
+          "notes": "First structured workout. Recovery between intervals: 3 min easy jog. Do NOT go faster than 9:30/mi — the goal is sustained effort, not sprinting.",
+          "warmupNote": "Full warm-up plus A-skips. The 1-mile easy warm-up within the workout counts as additional prep.",
+          "cooldownNote": "Full cool-down. After tempo work, spend extra time on the calf stretches (both straight and bent knee)."
+        },
+        {
+          "date": "2026-05-24",
+          "dayLabel": "Sun May 24",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "6 mi",
+          "pace": "10:30–11:00 /mi",
+          "notes": "Add one mile over last week. Stay fully conversational. Take a gel or 4 oz of sports drink at mile 3.",
+          "warmupNote": "Full warm-up. Hip circles and leg swings are especially important before longer runs.",
+          "cooldownNote": "Full cool-down with extra time on pigeon pose and IT band stretch."
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "dates": "May 27–31",
+      "focus": "Build Mileage",
+      "runs": [
+        {
+          "date": "2026-05-27",
+          "dayLabel": "Wed May 27",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "4 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "Midweek flush. Keep it easy — this is recovery from the weekend, not a workout.",
+          "warmupNote": "Light warm-up. Steps 1–8 are sufficient for easy days.",
+          "cooldownNote": "Standard cool-down."
+        },
+        {
+          "date": "2026-05-30",
+          "dayLabel": "Sat May 30",
+          "type": "Tempo Run",
+          "typeTag": "tempo",
+          "distance": "5.5 mi total",
+          "pace": "Warm-up 1 mi | 3.5 mi at 9:30–9:45 /mi | Cool-down 1 mi",
+          "notes": "Continuous tempo this week (no breaks). If you need to drop pace, slow to 10:00/mi but keep running — no walking during the tempo block.",
+          "warmupNote": "Full warm-up including A-skips. You need the neuromuscular activation before a sustained tempo.",
+          "cooldownNote": "Full cool-down. After 3.5 miles at tempo, your calves and hip flexors will be tight — give them extra time."
+        },
+        {
+          "date": "2026-05-31",
+          "dayLabel": "Sun May 31",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "7 mi",
+          "pace": "10:30–11:00 /mi",
+          "notes": "Biggest mileage jump yet. Break it mentally into thirds. Practice drinking on the run without stopping — you'll need this in the race.",
+          "warmupNote": "Full warm-up. Spend extra time on lateral lunges and ankle prep.",
+          "cooldownNote": "Extended cool-down. Walk for 5 full minutes before stretching. Hold each stretch for the full duration — don't rush."
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "dates": "Jun 3–7",
+      "focus": "Speed Introduction",
+      "runs": [
+        {
+          "date": "2026-06-03",
+          "dayLabel": "Wed Jun 3",
+          "type": "Speed Work — 400m Repeats",
+          "typeTag": "speed",
+          "distance": "4 mi total",
+          "pace": "Warm-up 1 mi | 6 × 400m at 8:15–8:30 /mi | Cool-down 1 mi",
+          "notes": "Run each 400m (0.25 mi) at hard effort, then jog 400m easy to recover. These teach your legs what fast feels like. If paces feel too hard, aim for 8:30–8:45/mi.",
+          "warmupNote": "Full warm-up with A-skips. Speed work requires thorough preparation — do not skip any steps today.",
+          "cooldownNote": "Full cool-down. After intervals, your legs will be fatigued — the walk cool-down is extra important before stretching."
+        },
+        {
+          "date": "2026-06-06",
+          "dayLabel": "Sat Jun 6",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "5 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "Recovery from Wednesday's speed work. Zero pressure — just accumulate easy miles. Focus on consistent cadence (~170 steps/min).",
+          "warmupNote": "Light warm-up. Steps 1–8 only today.",
+          "cooldownNote": "Standard cool-down."
+        },
+        {
+          "date": "2026-06-07",
+          "dayLabel": "Sun Jun 7",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "8 mi",
+          "pace": "10:15–10:45 /mi",
+          "notes": "First run over 5 miles. Mile 6–8 will feel new — slow down if needed but keep moving. Bring a gel and take it at mile 4.",
+          "warmupNote": "Full warm-up. Extra attention on hip circles and leg swings.",
+          "cooldownNote": "Extended cool-down. 5-min walk, then full stretching sequence. Hold pigeon pose for 90 sec each side today."
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "dates": "Jun 10–14",
+      "focus": "Build Tempo Strength",
+      "runs": [
+        {
+          "date": "2026-06-10",
+          "dayLabel": "Wed Jun 10",
+          "type": "Tempo Run",
+          "typeTag": "tempo",
+          "distance": "6 mi total",
+          "pace": "Warm-up 1 mi | 4 mi at 9:15–9:30 /mi | Cool-down 1 mi",
+          "notes": "Biggest tempo yet. Target 9:15/mi if you're feeling strong, 9:30 if it's a tough day. This is your most important workout of the week.",
+          "warmupNote": "Full warm-up with A-skips. Don't skip any steps — you're about to run 4 miles at a hard effort.",
+          "cooldownNote": "Full cool-down. After 4 miles at tempo pace, give extra time to calf stretches and the IT band stretch."
+        },
+        {
+          "date": "2026-06-13",
+          "dayLabel": "Sat Jun 13",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "5 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "Pure recovery. Resist any urge to push — your legs need to absorb Wednesday's effort.",
+          "warmupNote": "Light warm-up. Steps 1–8 only.",
+          "cooldownNote": "Standard cool-down."
+        },
+        {
+          "date": "2026-06-14",
+          "dayLabel": "Sun Jun 14",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "9 mi",
+          "pace": "10:15–10:45 /mi",
+          "notes": "Double digits are close. Stay patient through miles 6–7, which are typically the hardest. Take nutrition at miles 3 and 6.",
+          "warmupNote": "Full warm-up. This is a significant distance — thorough preparation matters.",
+          "cooldownNote": "Extended cool-down. Walk 5 min, then full stretching sequence. Pay special attention to the quad and hip flexor stretches."
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "dates": "Jun 17–21",
+      "focus": "Peak Speed + First Double-Digits",
+      "runs": [
+        {
+          "date": "2026-06-17",
+          "dayLabel": "Wed Jun 17",
+          "type": "Speed Work — 400m Repeats",
+          "typeTag": "speed",
+          "distance": "5 mi total",
+          "pace": "Warm-up 1 mi | 8 × 400m at 8:00–8:15 /mi | Cool-down 1 mi",
+          "notes": "More reps than Week 4. Aim for 8:00–8:15/mi. Recovery jog: 400m between each. If pace slips after rep 6, that's fine — push through the last two.",
+          "warmupNote": "Full warm-up with A-skips. Your fastest workout paces are today — prep is non-negotiable.",
+          "cooldownNote": "Full cool-down. After 8 intervals, your legs need serious recovery work."
+        },
+        {
+          "date": "2026-06-20",
+          "dayLabel": "Sat Jun 20",
+          "type": "Race Pace Run",
+          "typeTag": "race",
+          "distance": "6 mi total",
+          "pace": "1 mi easy | 4 mi at 9:00–9:09 /mi | 1 mi easy",
+          "notes": "First sustained race-pace effort. This is the key workout of the block. 9:09/mi should feel hard but controlled — if it feels easy, you started too fast.",
+          "warmupNote": "Full warm-up with A-skips. Race pace work demands your best preparation.",
+          "cooldownNote": "Full cool-down. The IT band and pigeon pose are especially important after race-pace efforts."
+        },
+        {
+          "date": "2026-06-21",
+          "dayLabel": "Sun Jun 21",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "10 mi",
+          "pace": "10:15–10:45 /mi",
+          "notes": "First double-digit run! Major milestone. Slow down in miles 4–6 if needed — finishing strong matters more than early pace. Fuel at miles 3, 6, and 8.5.",
+          "warmupNote": "Full warm-up. Take your time — this is a long day.",
+          "cooldownNote": "Extended cool-down. Walk 5+ minutes. Hold every stretch for the full duration. You earned it."
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "dates": "Jun 24–28",
+      "focus": "Peak Tempo Block",
+      "runs": [
+        {
+          "date": "2026-06-24",
+          "dayLabel": "Wed Jun 24",
+          "type": "Tempo Run",
+          "typeTag": "tempo",
+          "distance": "6 mi total",
+          "pace": "Warm-up 1 mi | 4 mi at 9:10–9:20 /mi | Cool-down 1 mi",
+          "notes": "Tempo at near-race pace. This is where the sub-2 hour fitness is built. The goal is to make 9:09/mi feel normal and sustainable.",
+          "warmupNote": "Full warm-up with A-skips.",
+          "cooldownNote": "Full cool-down. Extra attention on calf stretches (both variations) and the IT band."
+        },
+        {
+          "date": "2026-06-27",
+          "dayLabel": "Sat Jun 27",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "5 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "Flush the legs from Wednesday. Short and relaxed. Focus on breathing and form.",
+          "warmupNote": "Light warm-up. Steps 1–8 only.",
+          "cooldownNote": "Standard cool-down."
+        },
+        {
+          "date": "2026-06-28",
+          "dayLabel": "Sun Jun 28",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "11 mi",
+          "pace": "10:00–10:30 /mi",
+          "notes": "Second-longest run of the cycle. At this distance you're genuinely half marathon-ready. Aim for a negative split — run the second half slightly faster than the first. Fuel at miles 3, 6, and 9.",
+          "warmupNote": "Full warm-up. 11 miles deserves thorough preparation.",
+          "cooldownNote": "Extended cool-down. 5-min walk minimum. Full stretching sequence with extra time on pigeon pose, hamstrings, and hip flexors."
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "dates": "Jul 1–5",
+      "focus": "Peak Week",
+      "runs": [
+        {
+          "date": "2026-07-01",
+          "dayLabel": "Wed Jul 1",
+          "type": "Speed Work — 800m Repeats",
+          "typeTag": "speed",
+          "distance": "6 mi total",
+          "pace": "Warm-up 1 mi | 5 × 800m at 8:30–8:45 /mi | Cool-down 1 mi",
+          "notes": "800m repeats are the gold standard for half marathon fitness. Run each 800m (0.5 mi) at comfortably hard effort. 90-sec jog recovery between each. This is the hardest workout of the plan.",
+          "warmupNote": "Full warm-up with A-skips. The hardest workout of the plan — leave nothing out.",
+          "cooldownNote": "Full cool-down. After 5 × 800m, your legs need serious recovery. Walk for 5 full minutes before stretching."
+        },
+        {
+          "date": "2026-07-05",
+          "dayLabel": "Sat Jul 5",
+          "type": "Race Pace Run",
+          "typeTag": "race",
+          "distance": "7 mi total",
+          "pace": "1 mi easy | 5 mi at 9:00–9:09 /mi | 1 mi easy",
+          "notes": "5 miles at goal race pace. If you can complete this, you have the fitness for a sub-2 half. Stay relaxed in miles 2–3. Miles 4–5 will be hard — hold form.",
+          "warmupNote": "Full warm-up with A-skips. Race pace for 5 miles requires your best preparation.",
+          "cooldownNote": "Full cool-down. Don't skip the spinal twist and child's pose after this effort."
+        },
+        {
+          "date": "2026-07-05",
+          "dayLabel": "Sun Jul 6",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "12 mi",
+          "pace": "10:00–10:30 /mi",
+          "notes": "PEAK LONG RUN — the most important single run of the plan. This is 92% of race distance. Run conservatively: miles 1–5 should feel easy. Fuel at miles 3, 6, 9, and 11. Finishing this run is a major confidence marker.",
+          "warmupNote": "Full warm-up. Take 12–15 minutes on prep today. Your body needs it.",
+          "cooldownNote": "Extended cool-down. Walk 5–7 minutes. Hold every stretch for the full duration, especially pigeon pose (90 sec), hip flexors, and hamstrings."
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "dates": "Jul 8–12",
+      "focus": "Taper Begins — Volume Down, Intensity Stays",
+      "runs": [
+        {
+          "date": "2026-07-08",
+          "dayLabel": "Wed Jul 8",
+          "type": "Tempo Run",
+          "typeTag": "tempo",
+          "distance": "5 mi total",
+          "pace": "Warm-up 1 mi | 3 mi at 9:10 /mi | Cool-down 1 mi",
+          "notes": "Shorter tempo than peak weeks but same pace. You may feel surprisingly strong — that's the taper effect. Don't use that energy to run extra miles.",
+          "warmupNote": "Full warm-up with A-skips.",
+          "cooldownNote": "Full cool-down."
+        },
+        {
+          "date": "2026-07-11",
+          "dayLabel": "Sat Jul 11",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "4 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "Relaxed shakeout. Notice how much faster easy pace feels. Your body is recovering.",
+          "warmupNote": "Light warm-up. Steps 1–8 only.",
+          "cooldownNote": "Standard cool-down."
+        },
+        {
+          "date": "2026-07-12",
+          "dayLabel": "Sun Jul 12",
+          "type": "Long Run",
+          "typeTag": "long",
+          "distance": "10 mi",
+          "pace": "10:15–10:45 /mi",
+          "notes": "Last long run. Treat it as a confidence run — you've done the hard work. Practice your race-day routine: shoes, socks, nutrition, gear.",
+          "warmupNote": "Full warm-up.",
+          "cooldownNote": "Full cool-down. After this run, your taper is well underway — enjoy the recovery."
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "dates": "Jul 15–19",
+      "focus": "Full Taper — Sharpen for Race Day",
+      "runs": [
+        {
+          "date": "2026-07-15",
+          "dayLabel": "Wed Jul 15",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "4 mi",
+          "pace": "11:00–11:30 /mi",
+          "notes": "Easy and relaxed. Your legs should start feeling bouncy and fresh. Trust the taper.",
+          "warmupNote": "Light warm-up. Steps 1–8 only.",
+          "cooldownNote": "Standard cool-down."
+        },
+        {
+          "date": "2026-07-18",
+          "dayLabel": "Sat Jul 18",
+          "type": "Race Tune-Up",
+          "typeTag": "race",
+          "distance": "5 mi total",
+          "pace": "1 mi easy | 3 mi at 9:05–9:09 /mi | 1 mi easy",
+          "notes": "Last workout before race week. Run exactly your race pace for 3 miles to confirm the pace feels locked in. Then shut it down — no extras.",
+          "warmupNote": "Full warm-up with A-skips. Last hard effort before the race — do it right.",
+          "cooldownNote": "Full cool-down. After this session, the hay is in the barn."
+        },
+        {
+          "date": "2026-07-19",
+          "dayLabel": "Sun Jul 19",
+          "type": "Easy Run",
+          "typeTag": "easy",
+          "distance": "3 mi",
+          "pace": "11:30 /mi",
+          "notes": "Short and gentle. Finish and feel good. You're fully primed for race week.",
+          "warmupNote": "Light warm-up. 5-min walk only — no need for full dynamic prep.",
+          "cooldownNote": "Standard cool-down."
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "dates": "Jul 22–26",
+      "focus": "Race Week — Stay Fresh, Stay Confident, Execute",
+      "runs": [
+        {
+          "date": "2026-07-22",
+          "dayLabel": "Wed Jul 22",
+          "type": "Shakeout Run",
+          "typeTag": "easy",
+          "distance": "2–3 mi",
+          "pace": "11:30 /mi",
+          "notes": "Keep legs loose. Nothing heroic — 20–25 minutes of easy jogging.",
+          "warmupNote": "5-min walk only. You're this close to the race — don't stress the legs.",
+          "cooldownNote": "Light stretch: quad, calf, hip flexor, hamstring only. 5 minutes total."
+        },
+        {
+          "date": "2026-07-25",
+          "dayLabel": "Sat Jul 25",
+          "type": "Rest Day",
+          "typeTag": "rest",
+          "distance": "—",
+          "pace": "—",
+          "notes": "Complete rest. Walk only. Eat a larger-than-normal dinner with complex carbs (pasta, rice, sweet potato). Lay out all race gear tonight: shoes, socks, bib, watch, nutrition.",
+          "warmupNote": "No run today. Gentle 5-minute walk after dinner to aid digestion.",
+          "cooldownNote": "No stretching needed. Elevate your legs for 10 minutes before bed."
+        },
+        {
+          "date": "2026-07-26",
+          "dayLabel": "Sun Jul 26 — RACE DAY",
+          "type": "SF Half Marathon",
+          "typeTag": "race",
+          "distance": "13.1 mi",
+          "pace": "Goal: 9:00–9:09 /mi | Miles 1–3: 9:15–9:20 | Miles 4–8: 9:05–9:09 | Miles 9–11: hold | Miles 12–13.1: push",
+          "notes": "Start conservatively — adrenaline will make 9:20/mi feel like a jog. Let people pass you in mile 1. Settle in at miles 4–8. If you have energy at mile 10, begin your push. Finish strong — 10 weeks of training led to this moment.",
+          "warmupNote": "15-min pre-race warm-up 30 minutes before start: 5-min walk, leg swings, hip circles, high knees, butt kicks, 3-min easy jog. Keep it short — you're about to run 13.1 miles.",
+          "cooldownNote": "Post-race: walk for 10 minutes, then light stretching (quad, calf, hamstring, hip flexor). You've earned every minute of rest."
+        }
+      ]
+    }
+  ]
+}
